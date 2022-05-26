@@ -8,12 +8,13 @@ class GymsController < ApplicationController
     def destroy
         gym = Gym.find_by!(id: params[:id])
         gym.destroy
-        head :no_content
+        head :no_content, status: 204
     end
 
     private
-    def gym_params
-    end
+    # def find_gym
+
+    # end
 
 
     def render_record_not_found
